@@ -19,8 +19,6 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  csrf: ['*'],
-  cors: '*',
   collections: [Admins, Media, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
@@ -47,9 +45,12 @@ export default buildConfig({
           const formData = await req.formData()
 
           // Forward to external API
-          const response = await fetch('https://rdd-basic.zeabur.app/predict', {
+          const response = await fetch('https://bp4mcfb41472sh.api.runpod.ai', {
             method: 'POST',
             body: formData,
+            headers: {
+              'Authorization': 'Bearer rpa_IP0A4LS7YS0PC9LZ5ZECCI7QXETX2XVTMPPVUD1Jv5gw2a',
+            },
           })
 
           // Check content type and return appropriately
