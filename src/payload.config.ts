@@ -49,7 +49,7 @@ export default buildConfig({
             method: 'POST',
             body: formData,
             headers: {
-              'Authorization': 'Bearer rpa_IP0A4LS7YS0PC9LZ5ZECCI7QXETX2XVTMPPVUD1Jv5gw2a',
+              'Authorization': `Bearer ${process.env.RUNDPOD_API}`,
             },
           })
 
