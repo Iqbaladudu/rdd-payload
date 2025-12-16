@@ -7,7 +7,21 @@ export const Users: CollectionConfig = {
   },
   auth: true,
   fields: [
-    // Email added by default
-    // Add more fields as needed
+    {
+      name: 'roles',
+      type: "radio",
+      options: [
+        {
+          label: 'Driver',
+          value: 'driver',
+        },
+        {
+          label: 'Monitor',
+          value: 'monitor',
+        },
+      ],
+      defaultValue: 'driver',
+      required: true,
+    }
   ],
 }
