@@ -19,6 +19,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  cors: '*',
   collections: [Admins, Media, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
