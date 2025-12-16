@@ -8,6 +8,10 @@ export const Users: CollectionConfig = {
   auth: true,
   fields: [
     {
+      name: "fullName",
+      type: "text",
+    },
+    {
       name: 'roles',
       type: "radio",
       options: [
